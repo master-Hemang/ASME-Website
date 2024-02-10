@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+
+// base
+.flip {
+    position: relative;
+    >.front,
+    >.back {
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: 1s;
+        transition-property: transform, opacity;
+    }
+    >.front {
+        transform: rotateY(0deg);
+    }
+    >.back {
+        position: absolute;
+        opacity: 0;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        transform: rotateY(-180deg);
+    }
+    &:hover {
+        >.front {
+            transform: rotateY(180deg);
+        }
+        >.back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+    }
+    &.flipVertical {
+        >.back {
+            transform: rotateX(-180deg);
+        }
+        &:hover {
+            >.front {
+                transform: rotateX(180deg);
+            }
+            >.back {
+                transform: rotateX(0deg);
+            }
+        }
+    }
+}
+
+// custom
+.flip {
+    position: relative;
+    // display: inline-block;
+    margin: 50px auto;
+    width: 50rem;
+    >.front,
+    >.back {
+        color: rgb(0, 0, 0);
+        display: block;
+        //   width: inherit;
+        background-size: cover!important;
+        background-position: center!important;
+        height: 250px;
+        padding: 10px;
+        //   background: #313131;
+        border-radius: 10px;
+        p {
+            font-size: 0.9125rem;
+            line-height: 160%;
+            color: #999;
+        }
+    }
+}
+
+.frontDesign {
+  text-align: center;
+  box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    // border-radius: 15px;
+    // background: rgba(69, 150, 254, 0.39);
+    /* overflow: hidden; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    // filter:brightness(75%);
+}
+.frontDesign h1{
+  margin-top: 20%;
+  font-size: 50px;
+}
+.bgImage{
+    background-image: url("https://i.gifer.com/Jolr.gif")
+}
+.bgImage2{
+    background-color: rgb(30, 101, 146);
+}
+
+
+
+
+
+
+
+// body {
+//     font-family: Arial, sans-serif;
+//       background: #ddd;
+//   }
+  
+//   h1 {
+//       text-align: center;
+//       font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+//       color: #333;
+//       text-shadow: 0 1px 0 #fff;
+//       margin: 50px 0;
+//   }
+  
+  #wrapper {
+      width: 100px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border: 10px solid #aaa;
+      border-radius: 15px;
+      background-clip: padding-box;
+      text-align: center;
+  }
+  
+  .button {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      padding: 5px 10px;
+      border: 1px solid #aaa;
+      background-color: #eee;
+      background-image: linear-gradient(top, #fff, #f0f0f0);
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      color: #666;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+      cursor: pointer;
+      transition: all 0.2s ease-out;
+    &:hover {
+      border-color: #999;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+    }
+    &:active {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+    }
+  }
+  
+  .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+      transition: opacity 200ms;
+    // visibility: hidden;
+
+      // opacity: 0;
+      &.light {
+      background: rgba(255,255,255,0.5);
+    }
+    .cancel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: default;
+    }
+    &:target {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  .popup {
+      margin: 10px auto;
+      padding: 20px;
+      background: #fff;
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 5px;
+      width: 95%;
+      height: 90%;
+      position: relative;
+      z-index: 10000;
+    .light & {
+      border-color: #aaa;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+
+    }
+    h2 {
+      margin-top: 0;
+      color: #666;
+      font-family: "Trebuchet MS", Tahoma, Arial, sans-serif;
+      font-size: 50px;
+    }
+    .close {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 20px;
+      right: 20px;
+      opacity: 0.8;
+      transition: all 200ms;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #666;
+      &:hover {
+        opacity: 1;
+        color: rgb(0, 0, 0);
+        transform: scale(1.5);
+      }
+    }
+    .content {
+      max-height: 400px;
+      overflow: auto;
+    }
+    p {
+      margin: 0 0 1em;
+      font-size: 18px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }

@@ -1,0 +1,184 @@
+.eventBox{
+  padding:50px ;
+  text-align:center;
+  margin-top: 50px;
+  /* height: 100vh; */
+
+}
+.eventBox hr{
+  width:50%;
+  margin: auto;
+  height: 4px;
+  color:#000;
+  margin-bottom: 30px;
+
+}
+.eventBox h1{
+  margin-top: 30px;
+  font-size:50px;
+  color:#000;
+}
+.videoBox{
+  padding:20px ;
+  text-align:center;
+  /* height: 100vh; */
+  width: 50%;
+  margin: auto;
+  /* border: 2px solid #000; */
+  /* border-radius:10px; */
+  /* box-shadow: 5px 10px rgb(0,0,0,0.5);  */
+  margin-bottom: 50px;
+  margin-top: 50px;
+  box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    border-radius: 15px;
+    background: rgba(212, 231, 255, 0.295);
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+.videoHeading{
+  text-align:center;
+}
+.videoHeading hr{
+  width:50%;
+  margin: auto;
+  height: 4px;
+  color:#000;
+  margin-bottom: 30px;
+
+}
+.videoHeading h1{
+  font-size:50px;
+  color:#000;
+}
+.aboutBox{
+  text-align:center;
+  min-height: 80vh;
+  /* margin-top: 50px; */
+  /* width : 120em; */
+  margin:50px auto 0 auto;
+  padding: 50px;
+  /* vertical-align: middle; */
+}
+.aboutBox p{
+  font-size:20px;
+  color:#000;
+  margin-top:30px;
+  text-align: justify;
+}
+.aboutBox img{
+  margin-top: 20vh;
+}
+.aboutBox hr{
+  width:50%;
+  margin: auto;
+  height: 4px;
+  color:#000;
+  margin-bottom: 30px;
+  /* box-shadow: 0px 10px rgb(0,0,0,0.5); */
+}
+.aboutBox h1{
+  margin-top: 30px;
+  font-size:50px;
+  color:#000;
+}
+
+/* Create two equal columns that floats next to each other */
+.column{
+  float: left;
+  width: 50%;
+  /* padding: 10px; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+  .aboutBox img{
+    margin-top: 0;
+  }
+  
+}
+@media screen and (max-width: 1000px){
+  .videoBox{
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px){
+  .videoBox{
+    width: 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin:0;
+    padding: 0;
+  }
+}
+.bgWrap {
+  height: 100vh;
+  z-index: -1;
+  /* min-height: 500px; */
+  /* overflow: hidden; */
+  background : url('/img4.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  filter: brightness(50%);
+  /* background-attachment : scroll; */
+}
+.bgWrap{
+  /* opacity: 0.75; */
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+  /* border-radius: 10px; */
+}
+.bgText {
+  margin: 0;
+  /* width: 100px; */
+  font-size: 5rem;
+  line-height:7rem;
+  text-align: center;
+  /* padding-top: 40vh; */
+  color: #fff;
+  /* text-shadow: 1px 1px 1px #3c5c5e; */
+}
+
+
+
+@media (max-width: 600px) {
+  /* .grid {
+    width: 100%;
+    flex-direction: column;
+  } */
+  .videoBox, .eventBox, .h1{
+    padding:0;
+    margin: 0;
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    bottom: 0;
+
+  }
+}
+.typeBox{
+  text-align: center;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.typeBox h4{
+  text-align: center;
+  font-size: 25px;
+  color:#fff;
+}

@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Viktorie';
+	font-size: 62.5%;
+	font-size: 10px;
+	font-weight: 700;
+}
+
+/* Navbar section */
+
+.nav {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	line-height: 80px;
+	text-align: center;
+	z-index: 1000;
+}
+
+.nav div.logo {
+	float: left;
+	width: auto;
+	height: auto;
+	padding-left: 3rem;
+}
+
+.nav div.logo a {
+	text-decoration: none;
+	/* color: rgba(19, 18, 18, 0); */
+	/* font-size: 2.5rem; */
+}
+
+/* .nav div.logo a:hover {
+	background-color: #000000;
+} */
+
+.nav div.main_list {
+	height: 80px;
+	float: right;
+}
+
+.nav div.main_list ul {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/* background-color: rgb(0, 0, 0); */
+
+}
+
+.nav div.main_list ul li {
+	/* background-color: rgb(0, 0, 0); */
+	/* width: auto; */
+	height: 80px;
+	padding: 0;
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
+	border-radius:5px;
+	/* text-align:center; */
+}
+
+.nav div.main_list ul li a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+	line-height: 80px;
+	font-size: 3rem;
+}
+
+.nav div.main_list ul li:hover {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 5px;
+}
+
+/* Home section */
+
+.home {
+	width: 100%;
+	height: 100vh;
+	background-image: url(https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b0f6908fa5e81286213c7211276e6b3d&auto=format&fit=crop&w=1500&q=80);
+	background-position: center top;
+	background-size: cover;
+}
+
+.navTrigger {
+	display: none;
+}
+
+.nav {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+/* .container{
+	margin: 0;
+} */
+.navlinks li {
+	text-align: center;
+}
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.container {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.navTrigger {
+		display: block;
+	}
+	.nav div.logo {
+		margin-left: 15px;
+	}
+	.nav div.main_list {
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+	}
+	.nav div.show_list {
+		height: auto;
+		display: none;
+	}
+	.nav div.main_list ul {
+		flex-direction: column;
+		margin-top:0;
+		padding-right:0;
+		padding-left:0;
+		width: 100%;
+		height: 80vh;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: #000;
+		/*same background color of navbar*/
+		background-position: center top;
+	}
+	.nav div.main_list ul li {
+		width: 100%;
+		text-align: right;
+	}
+	.nav div.main_list ul li a {
+		text-align: center;
+		width: 100%;
+		font-size: 3rem;
+		padding: 20px;
+	}
+	.nav div.media_button {
+		display: block;
+	}
+}
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+
+
+.navTrigger {
+	cursor: pointer;
+	width: 30px;
+	height: 25px;
+	margin: auto;
+	position: absolute;
+	right: 30px;
+	top: 0;
+	bottom: 0;
+}
+
+.navTrigger i {
+	background-color: rgb(253, 253, 253);
+	border-radius: 2px;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	/* color: rgb(235, 228, 228); */
+
+}
+
+.navTrigger i:nth-child(1) {
+	-webkit-animation: outT 0.8s backwards;
+	animation: outT 0.8s backwards;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+	margin: 5px 0;
+	-webkit-animation: outM 0.8s backwards;
+	animation: outM 0.8s backwards;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+	-webkit-animation: outBtm 0.8s backwards;
+	animation: outBtm 0.8s backwards;
+	-webkit-animation-direction: reverse;
+	animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+	-webkit-animation: inT 0.8s forwards;
+	animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+	-webkit-animation: inM 0.8s forwards;
+	animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+	-webkit-animation: inBtm 0.8s forwards;
+	animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+	50% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(45deg);
+	}
+}
+
+@keyframes inM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@-webkit-keyframes outM {
+	50% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(45deg);
+	}
+}
+
+@keyframes outM {
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+@-webkit-keyframes inT {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@keyframes inT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@-webkit-keyframes outT {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@keyframes outT {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(9px) rotate(135deg);
+	}
+}
+
+@-webkit-keyframes inBtm {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@keyframes inBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@-webkit-keyframes outBtm {
+	0% {
+		-webkit-transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		-webkit-transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+@keyframes outBtm {
+	0% {
+		transform: translateY(0px) rotate(0deg);
+	}
+	50% {
+		transform: translateY(-9px) rotate(0deg);
+	}
+	100% {
+		transform: translateY(-9px) rotate(135deg);
+	}
+}
+
+.affix {
+	padding: 0;
+	background-color: rgb(0, 0, 0,0.8);
+}
+
+.myH2 {
+	text-align: center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 20px;
+}
+@media all and (max-width: 700px) {
+	.myP {
+		padding: 2%;
+	}
+}
+
+.logo{
+	/* padding: 5px; */
+	margin: auto;
+}
+
+/* .Events h1{
+	text-align: center;
+	font-weight: 900;
+	font-size: 50px;
+}
+.Videos h1{
+	text-align: center;
+	font-weight: 900;
+	font-size: 50px;
+} */
+.bgWrap, .txt{
+		position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        text-align: center;
+        width: 60%;
+		
+}
+.eventType{
+	font-size: 20px;
+	font-weight: 300;
+	padding-left: 15%;
+	padding-right: 15%;
+	display: flex;	
+	
+}
+
+@media (max-width: 800px) {
+	.eventType {
+	  flex-direction: column;
+	}
+  }
+.card-container{
+	margin: 30px;
+}
+
+
+
+
+/* #contact{
+	color: white;
+}
+#contact h1{color: white}
+
+.form-control-white {
+    background: transparent;
+    color: white;
+}
+
+.form-control-white::-webkit-input-placeholder {
+    color:    white;
+}
+.form-control-white:-moz-placeholder { 
+    color:    white;
+    opacity:  1;
+}
+.form-control-white::-moz-placeholder {
+    color:    white;
+    opacity:  1;
+}
+.form-control-white:-ms-input-placeholder {
+    color:    white;
+} */
+
+/* #footer{ 
+	background: #2B3E51; 
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+	margin-top: auto;
+
+} */
+
+.centerTxt{
+	border: 5px solid #000;
+	display: flex;
+	justify-content: center;
+}
+
+.upcomingEvent > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	/*styles go here*/
+  }
+
+
+.notFound{
+	text-align: center;
+	padding: 50px;
+	background-color: rgb(205, 205, 205);
+	height:50vh;
+	margin: 25vh ;
+	border-radius:20px;
+	font-family: Garamond, serif;
+}
+.notFound p{
+	font-size: 30px;
+}
+
+@media (max-width: 800px) {
+	.nav div{
+		margin:0px;
+		padding: 0;
+		/* height: 100vh; */
+	}
+  }

@@ -1,0 +1,128 @@
+.bgWrap {
+    height: 100vh;
+    z-index: -1;
+    /* min-height: 500px; */
+    /* overflow: hidden; */
+    background : url('/contact.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    filter: brightness(50%);
+    /* background-attachment : scroll; */
+  }
+  .bgWrap{
+    /* opacity: 0.75; */
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.5);
+    /* border-radius: 10px; */
+  }
+  .typeBox{
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+  }
+  .typeBox h4{
+    text-align: center;
+    font-size: 25px;
+    color:#fff;
+  }
+  .typeBox h1{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 75px;
+    color:#fff;
+  }
+
+/* Float four columns side by side */
+.column {
+    /* float: left; */
+    width: 30%;
+    padding: 0 10px;
+    margin: 20px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    /* margin: 0 -5px; */
+      display:flex;
+      justify-content:center;
+    }
+    
+    /* Clear floats after the columns */
+    /* .row:after {
+        content: "";
+    display: table;
+    clear: both;
+} */
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .row{
+        display: block;
+    }
+    .column {
+        width: 80%;
+        display: block;
+        margin: 20px auto;
+        /* margin-left:500px; */
+    }
+    .typeBox h1{
+        margin-bottom: 25px;
+        text-align: center;
+        font-size: 50px;
+        color:#fff;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    padding: 16px;
+    text-align: center;
+    /* background-color: #81dbff; */
+    min-height: 50vh;
+
+    /* position: relative; */
+    /* width: 280px; */
+    /* height: 400px; */
+    /* margin: 30px; */
+    box-shadow: 20px 20px 50px rgb(0 0 0 / 50%);
+    border-radius: 15px;
+    background: rgba(69, 150, 254, 0.39);
+    /* overflow: hidden; */
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    /* backdrop-filter: blur(5px); */
+
+}  
+.card h3{
+    font-size:30px;
+}
+.card p{
+    font-size:15px;
+    /* overflow: hidden; */
+} 
+
+.box{
+  min-width: 300px;
+  min-height: 450px;
+  /* margin-left: 200px; */
+}
+.container2{
+  margin: 0px;
+}
+.roww{
+  display:flex;
+  /* float : left; */
+}
+@media screen and (max-width: 1000px) {
+  .roww{
+    display:block;
+    /* float : left; */
+  }
+}

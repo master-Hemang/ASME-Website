@@ -1,0 +1,151 @@
+/* default list style css */
+#primaryFooter ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+#primaryFooter ul li{
+list-style: none;
+}
+#primaryFooter a{
+    text-decoration: none;
+    }
+/* main footer css */
+#primaryFooter{
+	background-color: #edf7fa;
+	}
+
+	.footerWidgetArea{
+		padding: 50px 0;
+	}
+
+/* main footer inner css */
+
+.footerWidgetArea p{
+		font-size: 16px;
+	}
+
+	.footerWidgetArea li{
+		margin-top: 10px;
+	}
+
+	.footerWidgetArea li a{
+		font-size: 20px;
+		color: var(--black);
+	}
+
+	.footerWidgetArea li a:hover{
+	 text-decoration: none;
+	 color: #00d07e;
+	}
+
+	.footerWidgetHeading h4{
+		font-weight: bold;
+		font-size: 25px;
+	}
+
+.linkediting .fa{
+    	color: #21bf73;
+        height: 12px;
+        width: 12px;
+    }
+
+
+.footerSocialIcon .socialTitle{
+    	font-size: 25px;
+    	font-weight: bold;
+    	margin-bottom: 10px;
+}
+.footerSocialIcon{
+	text-align: center;
+}
+
+	.circleIcon {
+    background: #ccf6c8;
+    color: #21bf73;
+    /* padding:12px; */
+    border-radius: 50%;
+    margin-left: 5px;
+    height: 40px;
+    width: 40px;
+	margin:5px;
+    text-align: center;
+}
+.circleIcon:hover{
+	opacity: 0.75;
+}
+
+/* footer credit css */
+
+.copyrightArea{
+	background-color: #edf7fa;
+	padding: 20px 0;
+    }
+
+    .copyrightText p{
+    	font-size: 18px;
+    }
+
+    .copyrightText a{
+    	color: #21bf73;
+    	font-weight: 600;
+    }
+
+    .footerMenus li{
+    	display: inline-flex;
+    	margin-left: 20px;
+    }
+
+    .footerMenus li a {
+ 	 font-size: 18px;
+ 	 color: var(--black);
+	}
+
+.copyrightText{
+	text-align: center;
+}
+/*media quries*/
+
+	@media (max-width: 1199.98px) {
+
+	}
+
+	@media (max-width: 991.98px) {
+       .footerSocialIcon span{
+     	font-size: 14px;
+     }
+	}
+
+	@media (max-width: 767.98px) {
+        .copyrightText p{
+    	text-align:center;
+     	}
+
+     	.footerMenus ul{
+    	 text-align:center;
+    	}
+
+    	.footerSocialIcon span{
+     	font-size: 18px;
+     }
+	}
+
+	@media (max-width: 575.98px) {
+		
+		.footerWidgetArea{
+		padding: 0 20px;
+		}
+
+		.copyrightText p{
+    	text-align:center;
+    	font-size:16px;
+     	}
+
+     	.footerMenus ul{
+    	 text-align:center;
+    	}
+
+    	.footerMenus ul li a{
+    	 font-size:16px;
+    	}
+	}
